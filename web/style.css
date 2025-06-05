@@ -8,10 +8,10 @@
   flex-wrap: wrap;
 }
 
+/*CABEÇALHO DA PÁGINA*/
 .topo {
   background-color: #111;
   color: white;
-  padding: 20px 0;
   border-bottom: 7px solid #414141;
 }
 
@@ -19,6 +19,16 @@
   font-size: 20px;
   font-weight: bold;
   margin: 0;
+}
+
+#topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* para ficar acima de tudo */
+  height: 15%;
+  background-color: #111; /* ou a cor que estiver usando */
 }
 
 /*ESTILO DO MENU HAMBURGUER*/
@@ -98,6 +108,7 @@
   display: flex;
 }
 
+/*SEÇÃO SOBRE*/
 .sobre {
   padding: 40px;
 }
@@ -139,16 +150,14 @@
   font-size: 16px;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-.carousel-img {
- padding: 20px;
-}
-
 /*CARROSSEL FUNCIONAL*/
+    .carousel {
+      padding-top: 7%;
+    }
 
     .carousel-container {
       width: 90%;
