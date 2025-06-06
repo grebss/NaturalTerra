@@ -20,7 +20,7 @@
   box-shadow: #111 0px 1px 10px;
 }
 
-
+/*ESTILO DO MENU HAMBURGUER*/
 .menu ul {
   list-style: none;
   margin: 0;
@@ -43,6 +43,7 @@
   border-radius: 5px;
 }
 
+/*ESTILO DO MENU HAMBURGUER*/
 .menu-toggle {
   display: none;
   background: none;
