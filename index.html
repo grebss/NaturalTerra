@@ -12,7 +12,6 @@
     <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
 <body>
-
   <!-- CABEÇALHO DA PÁGINA -->
   <header id="topo" class="topo">
     <div class="container">
@@ -20,6 +19,12 @@
         <img src="IMG/logo natural terra.png" class="logo-img">
       </a>
         
+      <div class="hamburguer" id="hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <nav class="menu">
         <ul>
           <li><a href="index.html">Início</a></li>
@@ -151,7 +156,7 @@
   
 
   <script>
-    const btnToggle = document.querySelector('.menu-toggle');
+    const btnToggle = document.querySelector('.#hamburguer');
     const menu = document.querySelector('.menu');
   
     btnToggle.addEventListener('click', () => {
