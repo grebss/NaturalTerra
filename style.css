@@ -1,3 +1,10 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefae0;
+  color: #333;
+}
+
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -13,14 +20,20 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* para ficar acima de tudo */
-  height: 15%;
+  height: 82px;
+  z-index: 1000;
   background-color: #111;
   border-bottom: 3px solid #414141;
   box-shadow: #111 0px 1px 10px;
 }
 
-/*ESTILO DO MENU HAMBURGUER*/
+.logo-img {
+  height: 70px;
+  width: auto;
+  padding-top: 6px;
+}
+
+/* MENU DE NAVEGAÇÃO */
 .menu ul {
   list-style: none;
   margin: 0;
@@ -43,64 +56,13 @@
   border-radius: 5px;
 }
 
-/*ESTILO DO MENU HAMBURGUER*/c 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-}
+/* ESTILO DO MENU HAMBURGUER */
 
-.menu-toggle .hamburguer,
-.menu-toggle.ativo .hamburguer {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  display: block;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-toggle .hamburguer::before,
-.menu-toggle .hamburguer::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-toggle .hamburguer::before {
-  top: -8px;
-}
-
-.menu-toggle .hamburguer::after {
-  top: 8px;
-}
-
-.menu-toggle.ativo .hamburguer {
-  background-color: transparent;
-}
-
-.menu-toggle.ativo .hamburguer::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-.menu-toggle.ativo .hamburguer::after {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.menu {
-  display: flex;
-}
 
 /*SEÇÃO SOBRE*/
 .sobre {
   padding: 40px;
+  background-color: #fefae0;
 }
 
 .container-sobre {
@@ -144,80 +106,87 @@ html {
   scroll-behavior: smooth;
 }
 
-/*CARROSSEL FUNCIONAL*/
-    .carousel {
-      padding-top: 7%;
-    }
+/* CARROSSEL FUNCIONAL */
+.carousel {
+  padding-top: 7%;
+}
 
-    .carousel-container {
-      width: 90%;
-      max-width: 800px;
-      margin: 50px auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+.carousel-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-    .carousel-slide {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-    .carousel-item {
-      min-width: 100%;
-      padding: 20px;
-      text-align: center;
-    }
+.carousel-item {
+  min-width: 100%;
+  padding: 20px;
+  text-align: center;
+}
 
-    .carousel-item img {
-      max-width: 4500px;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
+.carousel-item img {
+  max-width: 4500px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
 
-    .carousel-item h2 {
-      color: #2c3e50;
-    }
+.carousel-item h2 {
+  color: #2c3e50;
+}
 
-    .carousel-item p {
-      color: #555;
-      font-size: 16px;
-    }
+.carousel-item p {
+  color: #555;
+  font-size: 16px;
+}
 
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2em;
-      color: #333;
-      cursor: pointer;
-      user-select: none;
-    }
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
 
-    .arrow-left {
-      left: 10px;
-    }
+.arrow-left {
+  left: 10px;
+}
 
-    .arrow-right {
-      right: 10px;
-    }
+.arrow-right {
+  right: 10px;
+}
 
-    @media (max-width: 600px) {
-      .carousel-item img {
-        max-width: 80%;
-      }
-    }
+@media (max-width: 600px) {
+.carousel-item img {
+  max-width: 80%;
+  }
+}
 
+/* ABA PRODUTOS */
+.produtos {
+  padding-bottom: 50px;
+}
 
-    .logo img {
-      height: 120px;
-      width: auto;
-    }
+.card:hover {
+  transform: scale(1.03);
+  transition: 0.3 ease;
+  box-shadow: 0 4px 20px rgb(0, 0, 0, 0.2);
+}
 
-
+.card {
+  padding: 20px;
+}
 
 @media (max-width: 768px) {
   .menu-toggle {
@@ -242,5 +211,13 @@ html {
 
   .container {
     justify-content: space-between;
+  }
+
+  .menu {
+  display: flex;
+  }
+
+    .menu.menu-aberto {
+    display: flex;
   }
 }
