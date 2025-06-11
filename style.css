@@ -11,8 +11,8 @@ body {
   padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /*CABEÇALHO DA PÁGINA*/
@@ -31,6 +31,19 @@ body {
   height: 70px;
   width: auto;
   padding-top: 6px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-link {
+    align-self: center;
+    margin-bottom: 10px;
+  }
 }
 
 /* MENU DE NAVEGAÇÃO */
@@ -62,34 +75,6 @@ body {
     gap: 2rem;
 }
 
-/* ESTILO DO MENU HAMBURGUER */
-.hamburguer {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.hamburguer span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-
-.hamburguer.ativo span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburguer.ativo span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburguer.ativo span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
-/* Mobile */
 @media (max-width: 768px) {
   .menu {
     display: none;
@@ -119,6 +104,32 @@ body {
   }
 }
 
+/* ESTILO DO MENU HAMBURGUER */
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburguer span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.hamburguer.ativo span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguer.ativo span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.ativo span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
 
 /*SEÇÃO SOBRE*/
 .sobre {
@@ -165,6 +176,29 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .container-sobre img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container-sobre {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto-sobre {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+.carousel-item img {
+  max-width: 80%;
+  }
 }
 
 /* CARROSSEL FUNCIONAL */
@@ -224,11 +258,13 @@ html {
   right: 10px;
 }
 
-@media (max-width: 600px) {
-.carousel-item img {
-  max-width: 80%;
+@media (max-width: 768px) {
+  .carousel-item img {
+    width: 100%;
+    height: auto;
   }
 }
+
 
 /* ABA PRODUTOS */
 .produtos {
@@ -245,3 +281,13 @@ html {
   padding: 20px;
 }
 
+@media (max-width: 768px) {
+  .produtos .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
