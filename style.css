@@ -69,68 +69,6 @@ body {
   border-radius: 5px;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background-color: #111;
-    width: 100%;
-    margin-top: 15px;
-    text-align: center;
-  }
-
-  .menu.menu-aberto {
-    display: flex;
-  }
-
-  .hamburguer {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-  }
-
-  .hamburguer span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-  }
-}
-
-/* ESTILO DO MENU HAMBURGUER */
-.hamburguer {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.hamburguer span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-
-.hamburguer.ativo span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburguer.ativo span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburguer.ativo span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
 /*SEÇÃO SOBRE*/
 .sobre {
   padding: 40px;
@@ -289,5 +227,62 @@ html {
 
   .card {
     margin-bottom: 20px;
+  }
+}
+
+
+
+/* MENU padrão no desktop */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hamburguer {
+  display: none; /* não aparece no desktop */
+}
+
+/* BOTÃO ATIVO (efeito X) */
+.hamburguer.ativo span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburguer.ativo span:nth-child(2) {
+  opacity: 0;
+}
+.hamburguer.ativo span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+  }
+
+  .hamburguer span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .menu.menu-aberto {
+    display: flex;
   }
 }
